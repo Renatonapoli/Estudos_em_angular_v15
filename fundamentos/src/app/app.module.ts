@@ -6,6 +6,7 @@ import { PrimeiroComponente } from './components/primeiro-componente/pirmeiro-co
 import { HooksComponent } from './components/componente-hooks/hook.component';
 import { FormsModule } from '@angular/forms';
 import { TemplateComponent } from './components/templates-componente/template.component';
+import { BidirecionalComponent } from './components/bidirecional/bidirecional.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { TemplateComponent } from './components/templates-componente/template.co
     PrimeiroComponente,
     HooksComponent,
     TemplateComponent,
+    BidirecionalComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

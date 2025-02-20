@@ -1,5 +1,8 @@
 <primeiro-componente></primeiro-componente>
 
-<hooks-component [dadosEntrada]="'valor'"></hooks-component>
+<hooks-component [dadosEntrada]="'Cara'"></hooks-component>
 
 <template-component></template-component>
+
+<bidirecional [(size)]="fontSizePx"></bidirecional>
+<p [style.font-size.px]="fontSizePx">Tamanho da fonte</p>

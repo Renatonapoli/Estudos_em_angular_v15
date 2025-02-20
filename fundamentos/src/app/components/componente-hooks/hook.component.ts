@@ -16,7 +16,7 @@ import {
   templateUrl: './hook.component.html',
   styleUrls: ['./hook.component.scss'],
 })
-export class hooksComponent
+export class HooksComponent
   implements
     OnChanges,
     OnInit,

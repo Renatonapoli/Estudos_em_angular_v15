@@ -1,0 +1,14 @@
+<h1>Template</h1>
+
+<p>{{ nome }}</p>
+<button type="button" (click)="boasVindas($event, 'Seja bem vindo')">Boas Vindas!</button>
+
+<div>
+  <label for="">clique no botão</label>
+  <input type="text" #inputNome />
+  <button type="button" (click)="enviaNome($event, inputNome.value)">Clique</button>
+
+  <p>{{ inputNome.value }}</p>
+
+  <button (click)="habilitarBotao()">{{ disabledBotao ? 'Habilitar' : 'Desabilitar' }}</button>
+</div>

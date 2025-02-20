@@ -1,0 +1,17 @@
+<h1>Diretivas</h1>
+
+<h2>Diretivas de atributo</h2>
+
+<div [ngClass]="currentClasses">Diretiva NgClass</div>
+<div [ngStyle]="currentStyles">Diretiva NgStyles</div>
+
+<fieldset><h4>NgModels Exemplos</h4>
+
+  <p>Nome digitado no input: {{ currentItem.name }}</p>
+
+  <p>
+    <label for="exemplo-ngModel">[(ngModel)]:</label>
+    <input [(ngModel)]="currentItem.name" id="exemplo-ngModel">
+  </p>
+
+</fieldset>

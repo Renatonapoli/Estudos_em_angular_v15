@@ -1,0 +1,20 @@
+<h1>Diretiva NgIf</h1>
+
+<div *ngIf="hero" class="name">{{ hero.name }}</div>
+
+
+<h2>Diretiva NgFor</h2>
+
+<h3>Usando div</h3>
+<div *ngFor="let hero of heroes; let i=index; let odd=odd; trackBy: trackById"
+[class.odd]="odd">
+({{i}}) {{ hero.name }}
+</div>
+
+<h3>Usando ng-template</h3>
+<ng-template ngFor let-hero [ngForOf]="heroes" let-i="index" let-odd="odd"
+[ngForTrackBy]="trackById">
+<div [class.odd]="odd">
+  ({{i}}) {{hero.name}}
+</div>
+</ng-template>

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Item } from '../../../assets/core/item';
+import { Item } from 'src/assets/core/item';
 
 @Component({
-  selector: 'diretivas',
+  selector: 'diretivas-atributo',
   templateUrl: './diretivas.component.html',
   styleUrls: ['./diretivas.component.scss'],
 })
-export class DiretivasComponent {
+export class DiretivasAtributoComponent {
   canSave = true;
   isUnchanged = true;
   isSpecial = true;

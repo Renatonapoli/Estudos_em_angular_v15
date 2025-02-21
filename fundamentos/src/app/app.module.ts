@@ -7,7 +7,8 @@ import { HooksComponent } from './components/componente-hooks/hook.component';
 import { FormsModule } from '@angular/forms';
 import { TemplateComponent } from './components/templates-componente/template.component';
 import { BidirecionalComponent } from './components/bidirecional/bidirecional.component';
-import { DiretivasComponent } from './components/diretivas/diretivas.component';
+import { DiretivasAtributoComponent } from './components/diretivas/diretivas-de-atributo/diretivas.component';
+import { DiretivaEstruturalComponent } from './components/diretivas/diretivas-estruturais/diretiva-estrutural.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DiretivasComponent } from './components/diretivas/diretivas.component';
     HooksComponent,
     TemplateComponent,
     BidirecionalComponent,
-    DiretivasComponent,
+    DiretivasAtributoComponent,
+    DiretivaEstruturalComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

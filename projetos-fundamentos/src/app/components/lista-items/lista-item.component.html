@@ -1,0 +1,10 @@
+<div>
+  <label for="">Escreva sua tarefa:</label>
+  <input [(ngModel)]="item.nome"  type="text" placeholder="Digite o nome da tarefa" />
+  <input [(ngModel)]="item.conteudo" type="text" placeholder="Digite o conteúdo da tareda" />
+  <button (click)="setLista()">Inserir na lista</button>
+</div>
+
+<ul>
+  <li *ngFor="let item of lista">{{ item.nome }} / {{ item.conteudo }}</li>
+</ul>

@@ -1,0 +1,5 @@
+<h1>Dando dinâmismo aos botoes</h1>
+
+
+<button [class.form]="!formulario">Cor property-bynd</button>
+<button (click)="mudaCor()" [style.backgroundColor]="mudaCorBotao ? 'yellow' : 'red'" [style.color]="mudaCorBotao ? 'orange' : 'blue'">Muda cor botao</button>

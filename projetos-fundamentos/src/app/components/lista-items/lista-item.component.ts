@@ -19,4 +19,9 @@ export class ListaItemComponent {
       alert('Preencha todos os campos antes de inserir na lista!');
     }
   }
+
+  deletar(tarefa?: string) {
+    if (!tarefa) return;
+    this.lista = this.lista.filter((item) => item.nome !== tarefa);
+  }
 }

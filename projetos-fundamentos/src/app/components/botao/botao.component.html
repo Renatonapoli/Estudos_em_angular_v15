@@ -3,3 +3,11 @@
 
 <button [class.form]="!formulario">Cor property-bynd</button>
 <button (click)="mudaCor()" [style.backgroundColor]="mudaCorBotao ? 'yellow' : 'red'" [style.color]="mudaCorBotao ? 'orange' : 'blue'">Muda cor botao</button>
+
+<br>
+<input [(ngModel)]="dadoLi" placeholder="Digite algo e aperte o botão" type="text">
+<button (click)="inserirLi(dadoLi)">Inserir li</button>
+
+<ul *ngFor="let item of listaDeLi">
+  <li>{{ item }} <button (click)="deletarLi(item)">Deletar</button></li>
+</ul>

@@ -1,0 +1,20 @@
+<h1>Diretivas</h1>
+
+<button (click)="mudarMensagem()">Mudar mensagem</button>
+
+<span *ngIf="!mostrarMensagem">Olá, seja bem vindo!</span>
+<span *ngIf="mostrarMensagem" #aprovado>Parabéns, você foi aprovado na etapa de teste técnico.</span>
+
+
+<h1 [innerHtml]="mensagem"></h1>
+<h2 [ngClass]="!titulo ? 'corGreen' : 'corRed'">Diretivas de classes</h2>
+
+<p [style.background-color]="titulo ? 'green' : 'red'">ngStyle</p>
+
+
+<h3>Lista de compras</h3>
+
+<input [(ngModel)]="valor" (input)="filtrar()" type="text" placeholder="filtre pelo item">
+<ul>
+  <li *ngFor="let item of novalista let i = index">{{ i + 1 }} - {{ item }}</li>
+</ul>

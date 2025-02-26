@@ -1,0 +1,15 @@
+<h1>Pensamentos</h1>
+
+<input [(ngModel)]='valor' type="text" placeholder="filtre o pensamento que deseja...">
+<button (click)="salvarNaLista()">Salvar</button>
+
+<div>
+  <label for="">filtre pensamento: </label>
+  <input [(ngModel)]="valorPensamento" (input)="filtrarPensamento()" type="text">
+  <ul>
+    <li *ngFor="let pensamento of listaFiltro">
+      {{ pensamento }}
+      <button (click)="deletePensamento(pensamento)">Deletar</button>
+    </li>
+  </ul>
+</div>

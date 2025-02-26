@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 export class FiltroComponent {
   valor!: string;
   valorPensamento: string = '';
+  pensamentoEditado: string | null = null;
+  novoValorPensamento: string = '';
 
   listaPensamentos: string[] = ['teste', 'Forma'];
   listaFiltro: string[] = [...this.listaPensamentos];
@@ -18,15 +20,32 @@ export class FiltroComponent {
   }
 
   deletePensamento(valorItem: string) {
-    this.listaPensamentos = this.listaPensamentos.filter(
+    this.listaFiltro = this.listaPensamentos = this.listaPensamentos.filter(
       (item) => item !== valorItem
     );
-    this.listaFiltro = [...this.listaPensamentos];
   }
 
   filtrarPensamento() {
     this.listaFiltro = this.listaPensamentos.filter((item) =>
       item.toLowerCase().includes(this.valorPensamento.toLowerCase())
     );
+  }
+
+  editarPensamento(pensamento: string) {
+    this.pensamentoEditado = pensamento;
+    this.novoValorPensamento = pensamento;
+  }
+
+  salvarPensamentoEditado(pensamentoAntigo: string) {
+    const index = this.listaPensamentos.indexOf(pensamentoAntigo);
+    if (index !== -1) {
+      this.listaPensamentos[index] = this.novoValorPensamento;
+      this.listaFiltro = [...this.listaPensamentos];
+    }
+    this.pensamentoEditado = null;
+  }
+
+  cancelar() {
+    this.pensamentoEditado = null;
   }
 }

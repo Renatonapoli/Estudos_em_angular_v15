@@ -1,0 +1,28 @@
+<h1>Crud Filtro</h1>
+
+<label for="">Insrira um item na lista:</label>
+<input [(ngModel)]="valorItem" type="text">
+<button (click)="inserirNaLista()">Inserir na lista</button>
+<br><br>
+
+<label for="">Faça um filtro na lista:</label>
+<input [(ngModel)]="itemDaLista" (input)="filtrarLista()" type="text">
+
+<h3>Lista de items</h3>
+
+<ul>
+  <li *ngFor="let item of novaLista">
+    <ng-container *ngIf="editarValorItem === item; else editarDeletar">
+      <input [(ngModel)]="novoValorEditado" type="text">
+      <button (click)="salvarEdicao(item)">Salvar</button>
+      <button (click)="cancelar()">Cancelar</button>
+    </ng-container>
+
+
+    <ng-template #editarDeletar>
+      {{ item }}
+      <button (click)="editarValor(item)">Editar</button>
+      <button (click)="deletarItem(item)">Deletar</button>
+    </ng-template>
+  </li>
+</ul>

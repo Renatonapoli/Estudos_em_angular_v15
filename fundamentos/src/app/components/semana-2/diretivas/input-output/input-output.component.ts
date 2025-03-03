@@ -9,6 +9,9 @@ export class InputOutputComponent {
   valorTarefa!: string;
   valorFiltrado!: string;
 
+  valorTarefaEditado: string | null = null;
+  novoValorTarefaEditado!: string;
+
   arrayTarefas: string[] = ['Limpar casa', 'Lavar o carro'];
   novoArrayTarefas: string[] = [...this.arrayTarefas];
 
@@ -30,5 +33,23 @@ export class InputOutputComponent {
       (item) => item !== tarefaDeletado
     );
     this.novoArrayTarefas = [...this.arrayTarefas];
+  }
+
+  editar(valor: string) {
+    this.valorTarefaEditado = valor;
+    this.novoValorTarefaEditado = valor;
+  }
+
+  salvar(valorEditado: { antigo: string; novo: string }) {
+    const index = this.arrayTarefas.indexOf(valorEditado.antigo);
+    if (index !== -1) {
+      this.arrayTarefas[index] = valorEditado.novo;
+      this.novoArrayTarefas = [...this.arrayTarefas];
+    }
+    this.valorTarefaEditado = null;
+  }
+
+  cancelar() {
+    this.valorTarefaEditado = null;
   }
 }

@@ -9,9 +9,17 @@
 <h3>Lista de afazeres:</h3>
 <ul>
   <li *ngFor="let tarefa of novoArrayItems">
-    {{ tarefa }}
-    <button>Editar</button>
-    <button (click)="deletar(tarefa)">Deletar</button>
+    <ng-container *ngIf="valorItemEditado === tarefa; else viewMode" >
+      <input [(ngModel)]="novoValorItemEditado" type="text">
+      <button (click)="salvarEdicao(tarefa)">Salvar</button>
+      <button (click)="cancelar()">Cancelar</button>
+    </ng-container>
+
+    <ng-template #viewMode>
+      {{ tarefa }}
+      <button (click)="editar(tarefa)">Editar</button>
+      <button (click)="deletar(tarefa)">Deletar</button>
+    </ng-template>
   </li>
 </ul>
 

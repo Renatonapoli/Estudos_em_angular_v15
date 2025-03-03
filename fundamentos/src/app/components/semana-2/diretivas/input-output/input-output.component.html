@@ -3,9 +3,13 @@
 <app-filho
 [valorTarefaFilho]="valorTarefa"
 [valorFiltro]="valorTarefa"
+[valorItemEditado]="valorTarefaEditado"
 [novoArrayItems]="novoArrayTarefas"
 (inserirNaLista)="inserirTarefaNaLista($event)"
 (filtrando)="filtrarListaItem($event)"
 (deletarItem)="deletar($event)"
+(valorEditar)="editar($event)"
+(valorSalvar)="salvar($event)"
+(valorCancelar)="cancelar()"
 >
 </app-filho>

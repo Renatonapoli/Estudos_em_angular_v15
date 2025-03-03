@@ -2,7 +2,10 @@
 
 <app-filho
 [valorTarefaFilho]="valorTarefa"
-[arrayItem]="arrayTarefas"
+[valorFiltro]="valorTarefa"
+[novoArrayItems]="novoArrayTarefas"
 (inserirNaLista)="inserirTarefaNaLista($event)"
+(filtrando)="filtrarListaItem($event)"
+(deletarItem)="deletar($event)"
 >
 </app-filho>

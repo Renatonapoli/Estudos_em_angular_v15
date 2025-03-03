@@ -4,10 +4,14 @@
 <br><br>
 
 <label for="">Filtre um item da lista:</label>
-<input type="text" />
+<input [(ngModel)]="valorFiltro" (input)="filtrar()" type="text" />
 
 <h3>Lista de afazeres:</h3>
 <ul>
-  <li *ngFor="let tarefa of arrayItem">{{ tarefa }}</li>
+  <li *ngFor="let tarefa of novoArrayItems">
+    {{ tarefa }}
+    <button>Editar</button>
+    <button (click)="deletar(tarefa)">Deletar</button>
+  </li>
 </ul>
 

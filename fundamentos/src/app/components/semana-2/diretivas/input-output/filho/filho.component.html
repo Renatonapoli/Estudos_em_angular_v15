@@ -1,0 +1,13 @@
+<label for="">Insira um item na lista:</label>
+<input [(ngModel)]="valorTarefaFilho" type="text" />
+<button (click)="inserirItemLista()">Inserir</button>
+<br><br>
+
+<label for="">Filtre um item da lista:</label>
+<input type="text" />
+
+<h3>Lista de afazeres:</h3>
+<ul>
+  <li *ngFor="let tarefa of arrayItem">{{ tarefa }}</li>
+</ul>
+

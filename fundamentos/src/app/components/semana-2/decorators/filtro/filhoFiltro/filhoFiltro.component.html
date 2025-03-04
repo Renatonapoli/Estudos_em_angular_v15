@@ -1,0 +1,21 @@
+<h1>Filtro</h1>
+
+<label>Pesquisar pelo nome desejado:</label>
+<input [(ngModel)]="valorInput" (input)="filtrando()" type="text" />
+
+<h3>Lista desejada</h3>
+
+<ul>
+  <li *ngFor="let item of arrayAtualizado">
+    <ng-container *ngIf="valorAtual === item; else template">
+      <input [(ngModel)]="valorEditado" type="text" />
+      <button (click)="salvarValor(item)">Salvar</button>
+      <button (click)="cancelar()">Cancelar</button>
+    </ng-container>
+
+    <ng-template #template>
+      {{ item }}
+      <button (click)="editando(item)">Editar</button>
+    </ng-template>
+  </li>
+</ul>

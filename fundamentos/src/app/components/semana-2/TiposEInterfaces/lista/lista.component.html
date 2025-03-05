@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Tipos e interfaces</h1>
+
+  <h3>Cards tipados com INTERFACE</h3>
+  <div [className]="'container-cards'">
+    <div *ngFor="let item of lista">
+      <card-component
+        [fabricante]="item.fabricante"
+        [modelo]="item.modelo"
+        [quantidade]="item.quantidade"
+        [cor]="item.cor"
+      ></card-component>
+    </div>
+  </div>
+
+  <h3>Cards tipados com TYPES</h3>
+  <div [className]="'container-cards'">
+    <div *ngFor="let item of listaTypes">
+      <card-component
+        [fabricante]="item.fabricante"
+        [modelo]="item.modelo"
+        [quantidade]="item.quantidade"
+        [cor]="item.cor"
+        [botaoExistente]="true"
+      ></card-component>
+    </div>
+  </div>
+
+</div>

@@ -13,6 +13,8 @@ import { InputOutputComponent } from './components/semana-2/decorators/input-out
 import { FilhoComponent } from './components/semana-2/decorators/input-output/filho/filho.component';
 import { FiltroComponent } from './components/semana-2/decorators/filtro/filtro.component';
 import { FilhoFiltroCompoent } from './components/semana-2/decorators/filtro/filhoFiltro/filhoFiltro.component';
+import { ListaComponent } from './components/semana-2/TiposEInterfaces/lista/lista.component';
+import { CardComponent } from './components/semana-2/TiposEInterfaces/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FilhoFiltroCompoent } from './components/semana-2/decorators/filtro/fil
     FilhoComponent,
     FiltroComponent,
     FilhoFiltroCompoent,
+    ListaComponent,
+    CardComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

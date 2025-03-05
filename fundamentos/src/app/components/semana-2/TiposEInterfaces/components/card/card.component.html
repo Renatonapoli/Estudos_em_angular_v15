@@ -1,0 +1,15 @@
+<div [class.card]="'card'">
+  <small><strong>Fabricante:</strong></small>
+  <p>{{ fabricante }}</p>
+  <hr>
+  <small><strong>Modelo: </strong></small>
+  <p>{{ modelo }}</p>
+  <hr>
+  <small><strong>Quantidade:</strong></small>
+  <p>{{ quantidade }}</p>
+  <hr>
+  <small><strong>Cor:</strong></small>
+  <p>{{ cor }}</p>
+
+  <button *ngIf="botaoExistente" (click)="saibaMais()">Saiba mais</button>
+</div>

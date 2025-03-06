@@ -1,0 +1,10 @@
+<h1>Hooks - Ciclo de vida do componente</h1>
+
+<button (click)="mostrar = !mostrar">Alternar componente</button>
+
+<dados-component *ngIf="mostrar" [dadoInput]="valor" (salvandoDado)="salvar()"></dados-component>
+
+<p>{{ dado }}</p>
+
+
+

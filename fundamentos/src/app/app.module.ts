@@ -15,6 +15,8 @@ import { FiltroComponent } from './components/semana-2/decorators/filtro/filtro.
 import { FilhoFiltroCompoent } from './components/semana-2/decorators/filtro/filhoFiltro/filhoFiltro.component';
 import { ListaComponent } from './components/semana-2/TiposEInterfaces/lista/lista.component';
 import { CardComponent } from './components/semana-2/TiposEInterfaces/components/card/card.component';
+import { CicloDeVidaComponent } from './components/semana-2/cicloVidaComponente/ciclo.component';
+import { DadosComponent } from './components/semana-2/cicloVidaComponente/dados/dados.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { CardComponent } from './components/semana-2/TiposEInterfaces/components
     FilhoFiltroCompoent,
     ListaComponent,
     CardComponent,
+    CicloDeVidaComponent,
+    DadosComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

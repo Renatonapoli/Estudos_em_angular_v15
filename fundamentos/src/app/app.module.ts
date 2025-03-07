@@ -17,6 +17,8 @@ import { ListaComponent } from './components/semana-2/TiposEInterfaces/lista/lis
 import { CardComponent } from './components/semana-2/TiposEInterfaces/components/card/card.component';
 import { CicloDeVidaComponent } from './components/semana-2/cicloVidaComponente/ciclo.component';
 import { DadosComponent } from './components/semana-2/cicloVidaComponente/dados/dados.component';
+import { PaiComponent } from './components/semana-2/viewChildViewChildren/pai/pai.component';
+import { FilhoViewComponent } from './components/semana-2/viewChildViewChildren/pai/filho/filho-view.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { DadosComponent } from './components/semana-2/cicloVidaComponente/dados/
     CardComponent,
     CicloDeVidaComponent,
     DadosComponent,
+    PaiComponent,
+    FilhoViewComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

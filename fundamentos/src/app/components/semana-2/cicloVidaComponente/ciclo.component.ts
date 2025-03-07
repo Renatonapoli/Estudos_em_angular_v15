@@ -7,10 +7,10 @@ import {
   DoCheck,
   Input,
   OnChanges,
-  OnDestroy,
   OnInit,
   SimpleChanges,
 } from '@angular/core';
+import { DadosItems } from './interfaces/dadosItem';
 
 @Component({
   selector: 'ciclo-component',
@@ -24,21 +24,18 @@ export class CicloDeVidaComponent
     AfterContentInit,
     AfterContentChecked,
     AfterViewInit,
-    AfterViewChecked,
-    OnDestroy
+    AfterViewChecked
 {
-  @Input() valor: string = 'Testando ciclo de vida';
-  dado!: string;
+  @Input() valor: DadosItems = { nome: 'Panela', cor: 'azul' };
+  dado!: object;
   mostrar!: boolean;
 
   salvar() {
-    this.dado = this.valor;
+    this.valor = { ...this.valor, nome: 'Frigideira', cor: 'Verde' };
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['valor']) {
-      console.log('ngOnChanges: ', changes['valor'].currentValue);
-    }
+    console.log('ngOnChanges :', changes['valor'].currentValue);
   }
 
   ngDoCheck() {
@@ -58,14 +55,10 @@ export class CicloDeVidaComponent
   }
 
   ngAfterViewChecked() {
-    console.log('ngAfterViewInit: ', this.valor);
+    console.log('ngAfterViewChecked: ', this.valor);
   }
 
   ngOnInit() {
     console.log('ngOnInit: ', this.valor);
-  }
-
-  ngOnDestroy() {
-    console.log('ngOnDestroy: ', this.dado);
   }
 }

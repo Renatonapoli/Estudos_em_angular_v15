@@ -1,14 +1,30 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
+import { DadosItems } from '../interfaces/dadosItem';
 
 @Component({
   selector: 'dados-component',
   templateUrl: './dados.component.html',
 })
-export class DadosComponent {
-  @Input() dadoInput = 'Testando hooks no angular';
-  @Output() salvandoDado = new EventEmitter<string>();
+export class DadosComponent implements OnDestroy {
+  @Input() dadoInput: DadosItems = { nome: '', cor: '' };
+  @Output() salvandoDado = new EventEmitter<{ nome: ''; cor: '' }>();
 
   salvar() {
-    this.salvandoDado.emit(this.dadoInput);
+    this.salvandoDado.emit();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges :', changes['dadoInput'].currentValue);
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy: ', this.dadoInput);
   }
 }

@@ -19,6 +19,7 @@ import { CicloDeVidaComponent } from './components/semana-2/cicloVidaComponente/
 import { DadosComponent } from './components/semana-2/cicloVidaComponente/dados/dados.component';
 import { PaiComponent } from './components/semana-2/viewChildViewChildren/pai/pai.component';
 import { FilhoViewComponent } from './components/semana-2/viewChildViewChildren/pai/filho/filho-view.component';
+import { PipesComponent } from './components/semana-2/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FilhoViewComponent } from './components/semana-2/viewChildViewChildren/
     DadosComponent,
     PaiComponent,
     FilhoViewComponent,
+    PipesComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

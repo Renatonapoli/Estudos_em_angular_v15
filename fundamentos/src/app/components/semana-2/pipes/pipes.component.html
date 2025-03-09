@@ -1,0 +1,27 @@
+<h1>Pipes</h1>
+
+<p>{{ 'Usando pipe para letras maiúsculas' | uppercase }}</p>
+<p>{{ 'Usando pipe para letras minúsculas' | lowercase }}</p>
+
+<small>Usando pipe para formatar dinheiro:</small>
+<p>{{ 50 | currency:'R$' }}</p>
+
+<small>Pipe para formartar Datas</small>
+<p>{{ 'Sun Mar 09 2025 17:44:00 GMT-0300' | date: 'dd/MM/yyyy' }}</p>
+
+
+<input type="text" #numero placeholder="Digite o numero">
+<button (click)="ligaParaTelefone(numero.value)">Ligar</button>
+<br>
+<span>{{ numero.value }}</span>
+
+
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+  <label for="nome">Nome</label>
+  <input type="text" id="nome" class="form-control" name="nome" ngModel required>
+  <button type="submit">Enviar</button>
+</form>
+
+<div [hidden]="!itemForm.form.valid">
+  <p>{{ mensagemEnviada }}</p>
+</div>

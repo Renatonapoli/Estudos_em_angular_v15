@@ -20,6 +20,8 @@ import { DadosComponent } from './components/semana-2/cicloVidaComponente/dados/
 import { PaiComponent } from './components/semana-2/viewChildViewChildren/pai/pai.component';
 import { FilhoViewComponent } from './components/semana-2/viewChildViewChildren/pai/filho/filho-view.component';
 import { PipesComponent } from './components/semana-2/pipes/pipes.component';
+import { UserListComponent } from './components/semana-3/criandoServicos/user-lista.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,8 +43,9 @@ import { PipesComponent } from './components/semana-2/pipes/pipes.component';
     PaiComponent,
     FilhoViewComponent,
     PipesComponent,
+    UserListComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

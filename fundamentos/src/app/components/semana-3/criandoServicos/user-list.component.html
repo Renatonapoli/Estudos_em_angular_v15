@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Lista de Usuários</h2>
+  <button (click)="fetchUsers()">Carregar Usuários</button>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }} {{ user.email }}
+      <button (click)="removerUser(user.id)">Remover</button>
+    </li>
+  </ul>
+  <div>
+    <input [(ngModel)]="newUser.name" type="text"/>
+    <input [(ngModel)]="newUser.email" type="text">
+    <button (click)="addUser()">Adicionar Usuários</button>
+  </div>
+</div>

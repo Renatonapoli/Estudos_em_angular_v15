@@ -22,6 +22,7 @@ import { FilhoViewComponent } from './components/semana-2/viewChildViewChildren/
 import { PipesComponent } from './components/semana-2/pipes/pipes.component';
 import { UserListComponent } from './components/semana-3/criandoServicos/user-lista.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoggerComponent } from './components/semana-3/injecaoDeDependencia/logger.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     FilhoViewComponent,
     PipesComponent,
     UserListComponent,
+    LoggerComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],

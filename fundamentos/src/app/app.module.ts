@@ -23,6 +23,8 @@ import { PipesComponent } from './components/semana-2/pipes/pipes.component';
 import { UserListComponent } from './components/semana-3/criandoServicos/user-lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoggerComponent } from './components/semana-3/injecaoDeDependencia/logger.component';
+import { InputEntradaComponent } from './components/semana-3/injecaoDeDependencia/service/inputEntrada/inputEntrada.component';
+import { DisplayComponent } from './components/semana-3/injecaoDeDependencia/service/inputEntrada/displayComponent/displayComponent.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { LoggerComponent } from './components/semana-3/injecaoDeDependencia/logg
     PipesComponent,
     UserListComponent,
     LoggerComponent,
+    InputEntradaComponent,
+    DisplayComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],

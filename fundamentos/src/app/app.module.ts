@@ -23,8 +23,11 @@ import { PipesComponent } from './components/semana-2/pipes/pipes.component';
 import { UserListComponent } from './components/semana-3/criandoServicos/user-lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoggerComponent } from './components/semana-3/injecaoDeDependencia/logger.component';
-import { InputEntradaComponent } from './components/semana-3/injecaoDeDependencia/service/inputEntrada/inputEntrada.component';
-import { DisplayComponent } from './components/semana-3/injecaoDeDependencia/service/inputEntrada/displayComponent/displayComponent.component';
+import { InputEntradaComponent } from './components/semana-3/compartilhamentoDeDados/inputEntrada/inputEntrada.component';
+import { DisplayComponent } from './components/semana-3/compartilhamentoDeDados/inputEntrada/displayComponent/displayComponent.component';
+import { ObservaveisComponent } from './components/semana-3/introducaoRXJS/observables.component';
+import { TimerComponent } from './components/semana-3/introducaoRXJS/timer/timerObservableComponent';
+import { ArrayObservableComponent } from './components/semana-3/introducaoRXJS/arrayObservable/arrayObservable.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { DisplayComponent } from './components/semana-3/injecaoDeDependencia/ser
     LoggerComponent,
     InputEntradaComponent,
     DisplayComponent,
+    ObservaveisComponent,
+    TimerComponent,
+    ArrayObservableComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],

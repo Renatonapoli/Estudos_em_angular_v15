@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../service/data.service';
+import { DataService } from '../../injecaoDeDependencia/service/data.service';
 
 @Component({
   selector: 'inputEntrada-component',

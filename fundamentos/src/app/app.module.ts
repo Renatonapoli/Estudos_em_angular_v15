@@ -28,6 +28,8 @@ import { DisplayComponent } from './components/semana-3/compartilhamentoDeDados/
 import { ObservaveisComponent } from './components/semana-3/introducaoRXJS/observables.component';
 import { TimerComponent } from './components/semana-3/introducaoRXJS/timer/timerObservableComponent';
 import { ArrayObservableComponent } from './components/semana-3/introducaoRXJS/arrayObservable/arrayObservable.component';
+import { UsersComponent } from './components/semana-3/mapFilterTap/users/users.componente';
+import { PokemonComponent } from './components/semana-3/mapFilterTap/pokemons/pokemon.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { ArrayObservableComponent } from './components/semana-3/introducaoRXJS/a
     ObservaveisComponent,
     TimerComponent,
     ArrayObservableComponent,
+    UsersComponent,
+    PokemonComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],

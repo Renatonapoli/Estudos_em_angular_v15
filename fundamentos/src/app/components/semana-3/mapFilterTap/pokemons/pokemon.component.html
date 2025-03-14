@@ -1,0 +1,8 @@
+<h1>Component POKEMONS</h1>
+
+<button (click)="listaPokemons()">Listar Pokemons</button>
+
+<p *ngFor="let pokemon of arrayPokemon">
+<strong>Nome do pokemon: </strong>{{ pokemon.nome }} <br>
+<strong>URL: </strong>{{ pokemon.url }}
+</p>

@@ -14,6 +14,9 @@ export class HeroisDcComponent implements OnInit {
   ngOnInit() {
     this.heroisDcService.getHerois().subscribe(
       (data) => {
+        //TODO usar quando o estiver utilizando o SCAN ou ToArray na service.
+        // this.herois = [...this.herois, data];
+
         this.herois = data;
         console.log('Lista de Heróis carregada: ', this.herois);
       },

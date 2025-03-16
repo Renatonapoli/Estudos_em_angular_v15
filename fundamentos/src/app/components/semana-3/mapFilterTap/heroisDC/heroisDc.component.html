@@ -1,0 +1,14 @@
+<h1>Herois DC</h1>
+
+<div class="container">
+  <h1>Lista de super-Heróis</h1>
+  <div class="grid">
+    <div *ngFor="let heroi of herois" class="card">
+      <img [src]="heroi.image.url" alt="{{ heroi.name }}">
+      <h3>{{ heroi.name }}</h3>
+      <p><strong>Inteligência:</strong>{{ heroi.powerstats.intelligence }}</p>
+      <p><strong>Inteligência:</strong>{{ heroi.powerstats.strength }}</p>
+      <p><strong>Inteligência:</strong>{{ heroi.powerstats.speed }}</p>
+    </div>
+  </div>
+</div>

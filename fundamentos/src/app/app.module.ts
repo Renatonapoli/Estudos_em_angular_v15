@@ -30,6 +30,7 @@ import { TimerComponent } from './components/semana-3/introducaoRXJS/timer/timer
 import { ArrayObservableComponent } from './components/semana-3/introducaoRXJS/arrayObservable/arrayObservable.component';
 import { UsersComponent } from './components/semana-3/mapFilterTap/users/users.componente';
 import { PokemonComponent } from './components/semana-3/mapFilterTap/pokemons/pokemon.component';
+import { HeroisDcComponent } from './components/semana-3/mapFilterTap/heroisDC/heroisDc.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { PokemonComponent } from './components/semana-3/mapFilterTap/pokemons/po
     ArrayObservableComponent,
     UsersComponent,
     PokemonComponent,
+    HeroisDcComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],

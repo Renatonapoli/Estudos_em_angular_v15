@@ -31,6 +31,13 @@ import { ArrayObservableComponent } from './components/semana-3/introducaoRXJS/a
 import { UsersComponent } from './components/semana-3/mapFilterTap/users/users.componente';
 import { PokemonComponent } from './components/semana-3/mapFilterTap/pokemons/pokemon.component';
 import { HeroisDcComponent } from './components/semana-3/mapFilterTap/heroisDC/heroisDc.component';
+import { HomeComponent } from './components/semana-4/configuracao-router/components/home/home.component';
+import { CarroComponent } from './components/semana-4/configuracao-router/components/carros/carros.component';
+import { RoutingModule } from './components/semana-4/configuracao-router/routingModule.module';
+import { ErroPaginaComponent } from './components/semana-4/configuracao-router/components/erroPagina/erro.component';
+import { CarrosDeEntradaComponent } from './components/semana-4/configuracao-router/components/carros/tiposDeCarros/simples/simples.component';
+import { CarrosDeLuxoComponent } from './components/semana-4/configuracao-router/components/carros/tiposDeCarros/luxo/luxo.component';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -62,8 +69,19 @@ import { HeroisDcComponent } from './components/semana-3/mapFilterTap/heroisDC/h
     UsersComponent,
     PokemonComponent,
     HeroisDcComponent,
+    HomeComponent,
+    CarroComponent,
+    ErroPaginaComponent,
+    CarrosDeEntradaComponent,
+    CarrosDeLuxoComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RoutingModule,
+    RouterLink,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

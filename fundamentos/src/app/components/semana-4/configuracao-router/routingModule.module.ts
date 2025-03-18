@@ -16,11 +16,11 @@ const routes: Routes = [
     component: CarroComponent,
     children: [
       {
-        path: 'carros-luxo',
+        path: 'carros-luxo/:id',
         component: CarrosDeLuxoComponent,
       },
       {
-        path: 'carros-entrada',
+        path: 'carros-entrada/:id',
         component: CarrosDeEntradaComponent,
       },
     ],

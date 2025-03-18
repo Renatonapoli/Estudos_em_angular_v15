@@ -11,4 +11,8 @@ export class CarroComponent {
   voltar() {
     this.router.navigate(['']);
   }
+
+  navegarParaCarrosDeLuxo() {
+    this.router.navigate(['carros/carros-luxo', '231']);
+  }
 }

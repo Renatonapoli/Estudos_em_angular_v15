@@ -13,6 +13,6 @@ export class CarroComponent {
   }
 
   navegarParaCarrosDeLuxo() {
-    this.router.navigate(['carros/carros-luxo', '231']);
+    this.router.navigate(['lazy-loading/carros/carros-luxo', '231']);
   }
 }

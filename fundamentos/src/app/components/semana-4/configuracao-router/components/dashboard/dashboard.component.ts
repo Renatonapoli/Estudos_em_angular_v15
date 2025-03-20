@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <h1>Dashboard - Componente</h1>
     <button (click)="logout()">Logout</button>
-    <lazyLoading-component></lazyLoading-component>
+    <router-outlet></router-outlet>
   `,
 })
 export class DashboardComponent {

@@ -5,27 +5,34 @@ import { CarroComponent } from './components/carros/carros.component';
 import { CarrosDeLuxoComponent } from './components/carros/tiposDeCarros/luxo/luxo.component';
 import { CarrosDeEntradaComponent } from './components/carros/tiposDeCarros/simples/simples.component';
 import { LazyLoadingComponent } from './components/lazyLoading/lazyLoading.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LazyLoadingComponent,
+    component: DashboardComponent,
     children: [
       {
-        path: 'home/:id',
-        component: HomeComponent,
-      },
-      {
-        path: 'carros',
-        component: CarroComponent,
+        path: 'lazy-loading',
+        component: LazyLoadingComponent,
         children: [
           {
-            path: 'luxo/:id',
-            component: CarrosDeLuxoComponent,
+            path: 'home/:id',
+            component: HomeComponent,
           },
           {
-            path: 'entrada/:id',
-            component: CarrosDeEntradaComponent,
+            path: 'carros',
+            component: CarroComponent,
+            children: [
+              {
+                path: 'luxo/:id',
+                component: CarrosDeLuxoComponent,
+              },
+              {
+                path: 'entrada/:id',
+                component: CarrosDeEntradaComponent,
+              },
+            ],
           },
         ],
       },

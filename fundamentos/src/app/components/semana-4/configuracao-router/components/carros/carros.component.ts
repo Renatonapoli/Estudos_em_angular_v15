@@ -9,10 +9,10 @@ export class CarroComponent {
   constructor(private router: Router) {}
 
   voltar() {
-    this.router.navigate(['']);
+    this.router.navigate(['login']);
   }
 
   navegarParaCarrosDeLuxo() {
-    this.router.navigate(['lazy-loading/carros/carros-luxo', '231']);
+    this.router.navigate(['dashboard/carros/luxo', '231']);
   }
 }

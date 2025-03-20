@@ -17,6 +17,6 @@ export class HomeComponent implements OnInit {
   }
 
   paginaCarros() {
-    this.router.navigate(['lazy-loading/carros']);
+    this.router.navigate(['dashboard/carros']);
   }
 }

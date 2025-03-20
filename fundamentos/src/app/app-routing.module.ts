@@ -8,17 +8,11 @@ import { authGuard } from './components/semana-4/guards/auth.guards';
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent,
     canActivate: [authGuard],
-    children: [
-      {
-        path: 'lazy-loading',
-        loadChildren: () =>
-          import(
-            './components/semana-4/configuracao-router/lazyloading.module'
-          ).then((m) => m.LazyLoadingModule),
-      },
-    ],
+    loadChildren: () =>
+      import(
+        './components/semana-4/configuracao-router/lazyloading.module'
+      ).then((m) => m.LazyLoadingModule),
   },
   {
     path: 'login',

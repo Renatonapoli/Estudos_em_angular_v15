@@ -9,7 +9,7 @@ export class AuthService {
 
   login() {
     localStorage.setItem('token', '123456');
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['dashboard/lazy-loading']);
   }
 
   logout() {

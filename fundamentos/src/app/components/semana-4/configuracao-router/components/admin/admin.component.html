@@ -1,0 +1,14 @@
+<h1>Administrador Component</h1>
+<div>
+  <button (click)="setAdmin(true)">Definir como Administrador</button>
+  <button (click)="setAdmin(false)">Definir como Usuário comum</button>
+</div>
+
+<nav>
+  <ul>
+    <li><a routerLink="dashboard">Ir para Dashboard</a></li>
+    <li><a routerLink="usuario">Ir para Usuário</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+

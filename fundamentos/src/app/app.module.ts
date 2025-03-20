@@ -39,9 +39,11 @@ import { CarrosDeEntradaComponent } from './components/semana-4/configuracao-rou
 import { CarrosDeLuxoComponent } from './components/semana-4/configuracao-router/components/carros/tiposDeCarros/luxo/luxo.component';
 import { RouterLink } from '@angular/router';
 import { LazyLoadingComponent } from './components/semana-4/configuracao-router/components/lazyLoading/lazyLoading.component';
-import { LazyLoadingModule } from './components/semana-4/configuracao-router/lazyloading.module';
 import { LoginComponent } from './components/semana-4/configuracao-router/components/login/login.component';
 import { DashboardComponent } from './components/semana-4/configuracao-router/components/dashboard/dashboard.component';
+import { DashboardAdminComponent } from './components/semana-4/configuracao-router/components/admin/dashboard/dashboard.component';
+import { UsuarioComponent } from './components/semana-4/configuracao-router/components/admin/usuario/usuario.component';
+import { AdminComponent } from './components/semana-4/configuracao-router/components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +83,9 @@ import { DashboardComponent } from './components/semana-4/configuracao-router/co
     LazyLoadingComponent,
     LoginComponent,
     DashboardComponent,
+    DashboardAdminComponent,
+    UsuarioComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

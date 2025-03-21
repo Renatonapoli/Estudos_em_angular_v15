@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class AdminService {
   isAdmin(): boolean {
-    return localStorage.getItem('isAdmin') === 'true' ? true : false;
+    return localStorage.getItem('isAdmin') === 'true';
   }
 
   setAdmin(isAdmin: boolean) {
-    localStorage.setItem('isAdmin', isAdmin ? 'true' : 'false');
+    localStorage.setItem('isAdmin', String(isAdmin));
   }
 }

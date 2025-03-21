@@ -1,4 +1,7 @@
 <h1>Administrador Component</h1>
+
+<p>Status: {{isAdmin ? 'Administrados' : 'Usuário comum' }}</p>
+
 <div>
   <button (click)="setAdmin(true)">Definir como Administrador</button>
   <button (click)="setAdmin(false)">Definir como Usuário comum</button>

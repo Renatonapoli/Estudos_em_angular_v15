@@ -16,7 +16,6 @@ export const adminGuards: CanActivateChildFn = (
 
   if (!adminService.isAdmin()) {
     alert('Acesso negado! Apenas administrados podem acessar esta seção.');
-    router.navigate(['']);
     return false;
   }
   return true;

@@ -25,23 +25,26 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    canActivateChild: [adminGuards],
     children: [
+      {
+        path: '',
+        redirectTo: 'admin',
+        pathMatch: 'full',
+      },
       {
         path: 'dashboard',
         component: DashboardAdminComponent,
-        canActivateChild: [adminGuards],
       },
       {
         path: 'usuario',
         component: UsuarioComponent,
-        canActivateChild: [adminGuards],
-      },
-      {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full',
       },
     ],
+  },
+  {
+    path: '**',
+    redirectTo: 'admin',
   },
   // {
   //   path: '',

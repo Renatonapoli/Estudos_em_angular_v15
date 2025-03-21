@@ -44,6 +44,7 @@ import { DashboardComponent } from './components/semana-4/configuracao-router/co
 import { DashboardAdminComponent } from './components/semana-4/configuracao-router/components/admin/dashboard/dashboard.component';
 import { UsuarioComponent } from './components/semana-4/configuracao-router/components/admin/usuario/usuario.component';
 import { AdminComponent } from './components/semana-4/configuracao-router/components/admin/admin.component';
+import { FomularioComponent } from './components/semana-4/canDeactivate/formulario/fomulario.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { AdminComponent } from './components/semana-4/configuracao-router/compon
     DashboardAdminComponent,
     UsuarioComponent,
     AdminComponent,
+    FomularioComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { UsuarioComponent } from './components/semana-4/configuracao-router/comp
 import { adminGuards } from './components/semana-4/configuracao-router/components/admin/guard/admin.guards';
 import { AdminComponent } from './components/semana-4/configuracao-router/components/admin/admin.component';
 import { DashboardAdminComponent } from './components/semana-4/configuracao-router/components/admin/dashboard/dashboard.component';
+import { FomularioComponent } from './components/semana-4/canDeactivate/formulario/fomulario.component';
+import { CanDeActivateGuard } from './components/semana-4/canDeactivate/guards/canDeActivateGuard.guards';
 
 const routes: Routes = [
   // {
@@ -22,30 +24,6 @@ const routes: Routes = [
   //   path: 'login',
   //   component: LoginComponent,
   // },
-  {
-    path: 'admin',
-    component: AdminComponent,
-    canActivateChild: [adminGuards],
-    children: [
-      {
-        path: '',
-        redirectTo: 'admin',
-        pathMatch: 'full',
-      },
-      {
-        path: 'dashboard',
-        component: DashboardAdminComponent,
-      },
-      {
-        path: 'usuario',
-        component: UsuarioComponent,
-      },
-    ],
-  },
-  {
-    path: '**',
-    redirectTo: 'admin',
-  },
   // {
   //   path: '',
   //   redirectTo: '',
@@ -55,6 +33,40 @@ const routes: Routes = [
   //   path: '**',
   //   component: ErroPaginaComponent,
   // },
+  // {
+  //   path: 'admin',
+  //   component: AdminComponent,
+  //   canActivateChild: [adminGuards],
+  //   children: [
+  //     {
+  //       path: '',
+  //       redirectTo: 'admin',
+  //       pathMatch: 'full',
+  //     },
+  //     {
+  //       path: 'dashboard',
+  //       component: DashboardAdminComponent,
+  //     },
+  //     {
+  //       path: 'usuario',
+  //       component: UsuarioComponent,
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: '**',
+  //   redirectTo: 'admin',
+  // },
+  {
+    path: 'formulario',
+    component: FomularioComponent,
+    canDeactivate: [CanDeActivateGuard],
+  },
+  {
+    path: '',
+    redirectTo: '/formulario',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

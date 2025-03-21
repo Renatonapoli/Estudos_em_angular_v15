@@ -1,3 +1,4 @@
+import { UserComponent } from './components/semana-4/resolve/user/user.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -88,6 +89,7 @@ import { FomularioComponent } from './components/semana-4/canDeactivate/formular
     UsuarioComponent,
     AdminComponent,
     FomularioComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

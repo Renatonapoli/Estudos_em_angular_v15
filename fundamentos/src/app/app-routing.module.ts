@@ -10,6 +10,8 @@ import { AdminComponent } from './components/semana-4/configuracao-router/compon
 import { DashboardAdminComponent } from './components/semana-4/configuracao-router/components/admin/dashboard/dashboard.component';
 import { FomularioComponent } from './components/semana-4/canDeactivate/formulario/fomulario.component';
 import { CanDeActivateGuard } from './components/semana-4/canDeactivate/guards/canDeActivateGuard.guards';
+import { UserComponent } from './components/semana-4/resolve/user/user.component';
+import { UserResolve } from './components/semana-4/resolve/resolveFn.resolve';
 
 const routes: Routes = [
   // {
@@ -57,14 +59,24 @@ const routes: Routes = [
   //   path: '**',
   //   redirectTo: 'admin',
   // },
+  // {
+  //   path: 'formulario',
+  //   component: FomularioComponent,
+  //   canDeactivate: [CanDeActivateGuard],
+  // },
+  // {
+  //   path: '',
+  //   redirectTo: '/formulario',
+  //   pathMatch: 'full',
+  // },
   {
-    path: 'formulario',
-    component: FomularioComponent,
-    canDeactivate: [CanDeActivateGuard],
+    path: 'perfil',
+    component: UserComponent,
+    resolve: { user: UserResolve },
   },
   {
     path: '',
-    redirectTo: '/formulario',
+    redirectTo: '/perfil',
     pathMatch: 'full',
   },
 ];

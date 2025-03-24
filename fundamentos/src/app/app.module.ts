@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HooksComponent } from './components/semana-1/componente-hooks/hook.component';
 import { BidirecionalComponent } from './components/semana-1/bidirecional/bidirecional.component';
 import { PrimeiroComponente } from './components/semana-1/primeiro-componente/pirmeiro-compoente.component';
@@ -46,6 +46,7 @@ import { DashboardAdminComponent } from './components/semana-4/configuracao-rout
 import { UsuarioComponent } from './components/semana-4/configuracao-router/components/admin/usuario/usuario.component';
 import { AdminComponent } from './components/semana-4/configuracao-router/components/admin/admin.component';
 import { FomularioComponent } from './components/semana-4/canDeactivate/formulario/fomulario.component';
+import { FormularioComponent } from './components/semana-5/templaDrivenFormsVSReactiveForms/formulario/fomulario.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { FomularioComponent } from './components/semana-4/canDeactivate/formular
     AdminComponent,
     FomularioComponent,
     UserComponent,
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,6 +99,7 @@ import { FomularioComponent } from './components/semana-4/canDeactivate/formular
     HttpClientModule,
     AppRoutingModule,
     RouterLink,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

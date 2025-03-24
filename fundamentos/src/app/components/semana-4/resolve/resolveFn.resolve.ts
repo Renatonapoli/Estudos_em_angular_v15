@@ -9,6 +9,6 @@ export const UserResolve: ResolveFn<any> = (
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot
 ) => {
-  console.log('carregando os dados do usuário...');
+  // console.log('carregando os dados do usuário...');
   return of({ id: 1, nome: 'Renato Napoli', email: 'renato@email.com' });
 };

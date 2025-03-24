@@ -1,0 +1,32 @@
+<h2>Forms Reactive - Fomulário Reativo</h2>
+
+<label for="">Digite sua cor favorita:</label>
+<input type="text" [formControl]="corFavoritaControl" />
+<button (click)="atualizaNome()">Atualiza nome</button>
+<br>
+<span>{{ corFavoritaControl.value }}</span>
+
+<h2>FormGroup - Grupo de formulários</h2>
+
+<p>Preencha seu nome e seu sobrenome</p>
+
+<form [formGroup]="formularioNome" (ngSubmit)="onSubmit()">
+  <label for="nome">Nome: </label>
+  <input type="text" formControlName="nome"  />
+
+  <label for="sobrenome">Sobrenome: </label>
+  <input type="text" formControlName="sobrenome" />
+
+  <button type="submit">Enviar</button>
+</form>
+
+<span>{{ formularioNome.controls.nome.value }} {{ formularioNome.controls.sobrenome.value }}</span>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+<h2>Template Driven Forms - Formulário baseados em modelos</h2>
+
+<label for="">Digite sua cor favorita:</label>
+<input type="text" [(ngModel)]="corFavorita" />
+<br>
+<span>{{ corFavorita }}</span>

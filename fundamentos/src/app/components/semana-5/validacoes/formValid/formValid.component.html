@@ -1,0 +1,50 @@
+<h1>Template Driven Forms</h1>
+
+<h2>Preencha o formulário</h2>
+
+<input type="text" id="nome" name="nome" class="form-control"
+  required minlength="4" appForbiddenName="bob"
+  [(ngModel)]="hero.nome" #nome="ngModel"
+>
+
+<div *ngIf="nome.invalid && (nome.dirty || nome.touched)"
+class="alert">
+
+<div *ngIf="nome.errors?.['required']">
+  O nome é obrigatório!
+</div>
+<div *ngIf="nome.errors?.['minlength']">
+  É necessário que o nome tenha ao menos 4 caracters
+</div>
+<div *ngIf="nome.errors?.['forbiddenName']">
+  O nome não pode ser Bob.
+</div>
+</div>
+
+<!-- --------------------------------------------------------------- -->
+
+<h1>React Forms</h1>
+
+<h2>Preencha o formulário</h2>
+
+<form [formGroup]="heroForm">
+  <input type="text" id="reactive-name" class="form-control"
+    formControlName="name" required
+  >
+<div *ngIf="reactiveName?.invalid && (reactiveName?.dirty || reactiveName?.touched)"
+  class="alert"
+>
+  <div *ngIf="reactiveName?.errors?.['required']">
+    O nome é obrigatório!
+  </div>
+
+  <div *ngIf="reactiveName?.errors?.['minlength']">
+    É necessário que o nome tenha ao menos 4 caracters
+  </div>
+
+  <div *ngIf="reactiveName?.errors?.['forbiddenName']">
+    O nome não pode ser Bob.
+  </div>
+
+</div>
+</form>

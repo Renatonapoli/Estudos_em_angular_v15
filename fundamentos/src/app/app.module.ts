@@ -47,6 +47,7 @@ import { UsuarioComponent } from './components/semana-4/configuracao-router/comp
 import { AdminComponent } from './components/semana-4/configuracao-router/components/admin/admin.component';
 import { FomularioComponent } from './components/semana-4/canDeactivate/formulario/fomulario.component';
 import { FormularioComponent } from './components/semana-5/templaDrivenFormsVSReactiveForms/formulario/fomulario.component';
+import { FormsValidComponent } from './components/semana-5/validacoes/formValid/formValid.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import { FormularioComponent } from './components/semana-5/templaDrivenFormsVSRe
     FomularioComponent,
     UserComponent,
     FormularioComponent,
+    FormsValidComponent,
   ],
   imports: [
     BrowserModule,

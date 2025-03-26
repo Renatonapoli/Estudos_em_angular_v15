@@ -1,3 +1,5 @@
+import { ForbiddenNameDirective } from './components/semana-5/curstomValidators/formCustom/forbidden-name.directive';
+import { FormCustomValidatorsComponent } from './components/semana-5/curstomValidators/formCustom/formCustom.component';
 import { UserComponent } from './components/semana-4/resolve/user/user.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -94,6 +96,8 @@ import { FormsValidComponent } from './components/semana-5/validacoes/formValid/
     UserComponent,
     FormularioComponent,
     FormsValidComponent,
+    FormCustomValidatorsComponent,
+    ForbiddenNameDirective,
   ],
   imports: [
     BrowserModule,

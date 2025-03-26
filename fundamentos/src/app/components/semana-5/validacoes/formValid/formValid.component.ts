@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { forbiddenName } from './validadorPersonalizado/forbidden-name.validador';
 
 @Component({
   selector: 'forms-valid',

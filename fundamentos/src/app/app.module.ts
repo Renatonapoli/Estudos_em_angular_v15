@@ -50,6 +50,7 @@ import { AdminComponent } from './components/semana-4/configuracao-router/compon
 import { FomularioComponent } from './components/semana-4/canDeactivate/formulario/fomulario.component';
 import { FormularioComponent } from './components/semana-5/templaDrivenFormsVSReactiveForms/formulario/fomulario.component';
 import { FormsValidComponent } from './components/semana-5/validacoes/formValid/formValid.component';
+import { FormularioUserComponent } from './components/semana-5/controleDeEstadosDosCampos/formulario/formularioUser.component';
 
 @NgModule({
   declarations: [
@@ -98,6 +99,7 @@ import { FormsValidComponent } from './components/semana-5/validacoes/formValid/
     FormsValidComponent,
     FormCustomValidatorsComponent,
     ForbiddenNameDirective,
+    FormularioUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Controle de estados de campos</h1>
+
+  <h2>Cadastro</h2>
+
+  <form [formGroup]="form">
+    <div>
+      <label for="nome">Digite seu nome: </label>
+      <input type="text" id="nome" formControlName="nome" />
+      <small *ngIf="nome?.pristine">🔵 Prestine</small>
+      <small *ngIf="nome?.dirty">🟠 Dirty</small>
+      <small *ngIf="nome?.touched">✅ Touched</small>
+    </div>
+
+    <div>
+      <label for="email">Digite seu email: </label>
+      <input type="text" id="email" formControlName="email" />
+      <small *ngIf="nome?.pristine">🔵 Prestine</small>
+      <small *ngIf="nome?.dirty">🟠 Dirty</small>
+      <small *ngIf="nome?.touched">✅ Touched</small>
+  </div>
+</form>
+
+<h3>Estado do formulário</h3>
+  <pre>{{ form.value | json }}</pre>
+</div>

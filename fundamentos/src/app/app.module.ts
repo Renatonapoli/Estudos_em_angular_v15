@@ -53,6 +53,7 @@ import { FormsValidComponent } from './components/semana-5/validacoes/formValid/
 import { FormularioUserComponent } from './components/semana-5/controleDeEstadosDosCampos/formulario/formularioUser.component';
 import { ListaUsuarioComponent } from './components/semana-6/httpcliente-requisicoesHTTP/listaUsuarios/lista-usuarios.component';
 import { ListaPokemonsComponent } from './components/semana-6/httpcliente-requisicoesHTTP/listaPokemons/listaPokemons.component';
+import { ApiHeroesComponent } from './components/semana-6/metodos-GET-POST-PUT-DELETE/apiHeroes/apiHeroes.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +105,7 @@ import { ListaPokemonsComponent } from './components/semana-6/httpcliente-requis
     FormularioUserComponent,
     ListaUsuarioComponent,
     ListaPokemonsComponent,
+    ApiHeroesComponent,
   ],
   imports: [
     BrowserModule,

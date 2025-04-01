@@ -1,0 +1,7 @@
+<h1>Lista Pokemons</h1>
+
+<div *ngFor="let pokemon of listaPokemons" class="card">
+  <img src="" alt="">
+  <p>Nome: {{ pokemon.name }}</p>
+  <p>URL: <a [href]="pokemon.url">{{ pokemon.url }}</a></p>
+</div>

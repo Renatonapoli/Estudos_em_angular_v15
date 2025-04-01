@@ -52,6 +52,7 @@ import { FormularioComponent } from './components/semana-5/templaDrivenFormsVSRe
 import { FormsValidComponent } from './components/semana-5/validacoes/formValid/formValid.component';
 import { FormularioUserComponent } from './components/semana-5/controleDeEstadosDosCampos/formulario/formularioUser.component';
 import { ListaUsuarioComponent } from './components/semana-6/httpcliente-requisicoesHTTP/listaUsuarios/lista-usuarios.component';
+import { ListaPokemonsComponent } from './components/semana-6/httpcliente-requisicoesHTTP/listaPokemons/listaPokemons.component';
 
 @NgModule({
   declarations: [
@@ -102,6 +103,7 @@ import { ListaUsuarioComponent } from './components/semana-6/httpcliente-requisi
     ForbiddenNameDirective,
     FormularioUserComponent,
     ListaUsuarioComponent,
+    ListaPokemonsComponent,
   ],
   imports: [
     BrowserModule,

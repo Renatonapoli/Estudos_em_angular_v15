@@ -1,50 +1,65 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
+import { Pokemon } from '../pokemon';
+import { forkJoin, map, Observable, switchMap } from 'rxjs';
 
 @Component({
   selector: 'api-heroes',
   templateUrl: './apiHeroes.component.html',
 })
 export class ApiHeroesComponent implements OnInit {
-  heroes: Hero[] = [] as Hero[];
-  apiUrl = '/api';
-
-  newHeroName: string = '';
-  newHeroPower: string = '';
+  pokemons: Pokemon[] = [];
+  apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=10';
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getPokemons();
   }
 
-  getHeroes(): void {
-    this.http.get<Hero[]>(`${this.apiUrl}/1`).subscribe((data) => {
-      console.log(data);
-      this.heroes = data || [];
-    });
-  }
+  // getPokemons(): void {
+  //   this.http.get<any>(this.apiUrl).subscribe((response) => {
+  //     const results = response.results;
 
-  addHero(name: string, power: string): void {
-    if (!name || !power) return;
-    const newHero: Hero = { name, power };
+  //     const pokemonRequests = results.map((pokemon: Pokemon) =>
+  //       this.http.get<any>(pokemon.url)
+  //     );
+
+  //     Promise.all(pokemonRequests.map((req: any) => req.toPromise())).then(
+  //       (pokemons) => {
+  //         console.log(pokemons);
+  //         this.pokemons = pokemons.map((p) => ({
+  //           name: p.name,
+  //           url: p.sprites.front_default,
+  //           id: p.id,
+  //           types: p.types.map((t: any) => t.type.name),
+  //         }));
+  //       }
+  //     );
+  //   });
+  // }
+
+  getPokemons(): void {
     this.http
-      .post<Hero>(this.apiUrl, newHero)
-      .subscribe((hero) => this.heroes.push(hero));
-    this.newHeroName = '';
-    this.newHeroPower = '';
-  }
-
-  update(hero: Hero): void {
-    this.http
-      .put(`${this.apiUrl}/${hero.id}`, hero)
-      .subscribe(() => this.getHeroes());
-  }
-
-  deleteHero(id: number): void {
-    this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
-      this.heroes = this.heroes.filter((hero) => hero.id !== id);
-    });
+      .get<any>(this.apiUrl)
+      .pipe(
+        switchMap((response) => {
+          const pokemonRequests = response.results.map((pokemon: any) =>
+            this.http.get<any>(pokemon.url)
+          );
+          return forkJoin(pokemonRequests) as Observable<any[]>;
+        }),
+        map((pokemons) =>
+          pokemons.map((p: any) => ({
+            name: p.name,
+            url: p.sprites.front_default,
+            id: p.id,
+            types: p.types.map((t: any) => t.type.name),
+          }))
+        )
+      )
+      .subscribe((formattedPokemons) => {
+        this.pokemons = formattedPokemons;
+      });
   }
 }

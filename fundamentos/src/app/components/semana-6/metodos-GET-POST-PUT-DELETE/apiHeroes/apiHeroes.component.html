@@ -1,19 +1,10 @@
 <h1>Heroes</h1>
 
 <div class="container">
-  <h2>Lista de super heróis</h2>
+  <h2>Lista de pokemons</h2>
 
-  <ul>
-    <li *ngFor="let hero of heroes || []">
-      {{ hero.name }} - {{ hero.power }}
-      <!-- <button (click)="hero.id ? deleteHero(hero.id) : null">Delete</button> -->
-    </li>
-  </ul>
-
-  <div>
-    <h3>Adicionar herói</h3>
-    <input type="text" [(ngModel)]="newHeroName" placeholder="Name" />
-    <input type="text" [(ngModel)]="newHeroPower" placeholder="Power" />
-    <!-- <button (click)="addHero(newHeroName, newHeroPower)">Adicionar herói</button> -->
+    <div *ngFor="let pokemon of pokemons">
+      <img [src]="pokemon.url" width="80" height="80" alt="{{ pokemon.name }}">
+     <strong> {{ pokemon.name | titlecase}} </strong>
+    </div>
   </div>
-</div>

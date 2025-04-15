@@ -1,0 +1,6 @@
+<div>
+  <p [style.white-space]="'pre-line'" *ngIf="recebeMensagem; else semMensagemRecebida">{{ recebeMensagem }}</p>
+  <ng-template #semMensagemRecebida>
+    <p>Nenhuma mensagem recebida até o momento...</p>
+  </ng-template>
+</div>

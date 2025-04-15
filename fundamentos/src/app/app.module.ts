@@ -54,6 +54,8 @@ import { FormularioUserComponent } from './components/semana-5/controleDeEstados
 import { ListaUsuarioComponent } from './components/semana-6/httpcliente-requisicoesHTTP/listaUsuarios/lista-usuarios.component';
 import { ListaPokemonsComponent } from './components/semana-6/httpcliente-requisicoesHTTP/listaPokemons/listaPokemons.component';
 import { ApiHeroesComponent } from './components/semana-6/metodos-GET-POST-PUT-DELETE/apiHeroes/apiHeroes.component';
+import { EnviaMensagemComponent } from './components/semana-7/components/mensagem/envia-mensagem/envia-mensagem.component';
+import { RecebeMensagemComponent } from './components/semana-7/components/mensagem/recebe-mensagem/recebe-mensagem.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +108,8 @@ import { ApiHeroesComponent } from './components/semana-6/metodos-GET-POST-PUT-D
     ListaUsuarioComponent,
     ListaPokemonsComponent,
     ApiHeroesComponent,
+    EnviaMensagemComponent,
+    RecebeMensagemComponent,
   ],
   imports: [
     BrowserModule,

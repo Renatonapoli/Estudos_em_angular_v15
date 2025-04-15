@@ -56,6 +56,8 @@ import { ListaPokemonsComponent } from './components/semana-6/httpcliente-requis
 import { ApiHeroesComponent } from './components/semana-6/metodos-GET-POST-PUT-DELETE/apiHeroes/apiHeroes.component';
 import { EnviaMensagemComponent } from './components/semana-7/components/mensagem/envia-mensagem/envia-mensagem.component';
 import { RecebeMensagemComponent } from './components/semana-7/components/mensagem/recebe-mensagem/recebe-mensagem.component';
+import { AlternarStatusComponent } from './components/semana-7/components/behaviorSubject/alternar-status/alternar-status.component';
+import { AlternarTemaComponent } from './components/semana-7/components/behaviorSubject/alternar-tema/alternar-tema.component';
 
 @NgModule({
   declarations: [
@@ -110,6 +112,8 @@ import { RecebeMensagemComponent } from './components/semana-7/components/mensag
     ApiHeroesComponent,
     EnviaMensagemComponent,
     RecebeMensagemComponent,
+    AlternarStatusComponent,
+    AlternarTemaComponent,
   ],
   imports: [
     BrowserModule,

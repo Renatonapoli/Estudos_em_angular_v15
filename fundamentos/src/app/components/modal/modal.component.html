@@ -1,0 +1,43 @@
+<section>
+  <div>
+    <button (click)="fecharModal()">X</button>
+  </div>
+  <header>
+    <h1>Como você prefere receber o nosso contato?</h1>
+    <p>Converse com nosso time de consultores e conheça as facilidades de
+      tecnologia e gestão que cabem no seu negócio
+    </p>
+  </header>
+
+  <div>
+    <div>
+      <label>Telefone</label>
+      <input type="radio" (click)="eventoSelecionado()" >
+      <ng-template #campoTelefone>
+        <input type="text" >
+      </ng-template>
+
+    </div>
+    <hr>
+    <div>
+      <label>Email</label>
+      <input type="radio" >
+    </div>
+
+    <small>Atendimento em <strong>até 03 dias úteis</strong></small>
+  </div>
+
+  <footer>
+    <p>
+      As informações fornecidas não alteram os dados cadastrais da sua conta e
+      podem ser compartilhados com empresas parceiras e poderão ser tratados de
+      acordo com a nossa política de Privacidade disponível em nossos sites e
+      aplicativos
+    </p>
+
+    <div>
+      <button (click)="voltar()">Voltar</button>
+      <button (click)="solicitar()" disabled>Solicitar contato</button>
+    </div>
+  </footer>
+</section>

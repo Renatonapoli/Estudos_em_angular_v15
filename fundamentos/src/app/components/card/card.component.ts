@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'card',
@@ -9,7 +10,7 @@ export class CardComponent {
   @Input() titulo: string = '';
   @Input() subtitulo: string = '';
 
-  @Output() saibaMais = new EventEmitter();
+  @Output() saibaMais = new EventEmitter<void>();
 
   clickSaibaMais() {
     this.saibaMais.emit();

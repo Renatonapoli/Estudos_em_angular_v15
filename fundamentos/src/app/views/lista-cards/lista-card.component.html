@@ -3,9 +3,11 @@
 <section>
   <div>
     <card
-      titulo="Conexão Itaú"
-      subtitulo="Emita NF-e, controle seu caixa e estoque,
-      concilie recebíveis e mais"
+      [titulo]="'Conexão Itaú'"
+      [subtitulo]="'Emita NF-e, controle seu caixa e estoque, concilie recebíveis e mais'"
+      (saibaMais)="abrirModal()"
       ></card>
+
+      <modal *ngIf="modalAberto" (fechar)="fecharModal()"></modal>
   </div>
 </section>

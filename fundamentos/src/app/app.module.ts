@@ -58,6 +58,7 @@ import { EnviaMensagemComponent } from './components/semana-7/components/mensage
 import { RecebeMensagemComponent } from './components/semana-7/components/mensagem/recebe-mensagem/recebe-mensagem.component';
 import { AlternarStatusComponent } from './components/semana-7/components/behaviorSubject/alternar-status/alternar-status.component';
 import { AlternarTemaComponent } from './components/semana-7/components/behaviorSubject/alternar-tema/alternar-tema.component';
+import { ListaCardsModule } from './views/lista-cards/lista-cards.module';
 
 @NgModule({
   declarations: [
@@ -122,6 +123,7 @@ import { AlternarTemaComponent } from './components/semana-7/components/behavior
     AppRoutingModule,
     RouterLink,
     ReactiveFormsModule,
+    ListaCardsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

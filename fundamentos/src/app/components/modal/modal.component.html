@@ -15,15 +15,22 @@
         Telefone
         <input
           type="radio"
+          name="contato"
           (change)="eventoSelecionado('telefone')"
-          name="contato">
+          >
       </label>
 
-      <div *ngIf="telefoneDigitado === 'telefone'">
+      <div *ngIf="contatoSelecionado === 'telefone'">
         <input
-          type="tel"
-          placeholder="(00)00000-0000"
-          [(ngModel)]="contatoSelecionado">
+          type="text"
+          placeholder="(00) 00000-0000"
+          [ngModel]="telefoneDigitado"
+          (ngModelChange)="onTelefoneChange($event)"
+          (input)="aplicaMascaraTelefone($event)"
+          (keypress)="permitirApenasNumeros($event)"
+        >
+        <br>
+        <small *ngIf="telefoneInvalido">Telefone inválido</small>
       </div>
 
     </div>
@@ -34,16 +41,17 @@
           type="radio"
           (change)="eventoSelecionado('email')"
           name="contato"
-
         >
       </label>
     </div>
-    <div *ngIf="emailDigitado === 'email'">
+    <div *ngIf="contatoSelecionado === 'email'">
       <input
         type="text"
         placeholder="exemplo@email.com"
-        [(ngModel)]="contatoSelecionado"
+        [ngModel]="emailDigitado"
+        (ngModelChange)="onEmailChange($event)"
         >
+      <div *ngIf="emailInvalido">Email inválido</div>
     </div>
 
     <small>Atendimento em <strong>até 03 dias úteis</strong></small>
@@ -59,7 +67,8 @@
 
     <div>
       <button (click)="voltar()">Voltar</button>
-      <button (click)="solicitar()" disabled>Solicitar contato</button>
+      <button (click)="solicitar()"
+      [disabled]="!formularioValido()">Solicitar contato</button>
     </div>
   </footer>
 </section>

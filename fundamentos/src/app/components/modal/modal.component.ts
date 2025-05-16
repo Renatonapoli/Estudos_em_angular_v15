@@ -8,7 +8,18 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class ModalComponent {
   @Output() fechar = new EventEmitter<void>();
 
-  eventoSelecionado() {}
+  contatoSelecionado: 'telefone' | 'email' | null = null;
+
+  telefoneDigitado: string = '';
+  emailDigitado: string = '';
+
+  eventoSelecionado(tipo: 'telefone' | 'email') {
+    this.telefoneDigitado = tipo;
+    this.emailDigitado = tipo;
+
+    console.log(this.telefoneDigitado);
+    console.log(this.emailDigitado);
+  }
 
   fecharModal() {
     this.fechar.emit();

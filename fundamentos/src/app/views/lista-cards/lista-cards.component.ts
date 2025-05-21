@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
 })
 export class ListaCardsComponent {
   modalAberto: boolean = false;
+  modalSucesso: boolean = true;
+  modalSolicitarContato: boolean = false;
 
   abrirModal() {
     this.modalAberto = true;
@@ -13,5 +15,14 @@ export class ListaCardsComponent {
 
   fecharModal() {
     this.modalAberto = false;
+  }
+
+  fecharModalSucesso() {
+    this.modalSolicitarContato = false;
+  }
+
+  contatoEnviadoComSucesso() {
+    this.modalSolicitarContato = true;
+    this.fecharModal();
   }
 }

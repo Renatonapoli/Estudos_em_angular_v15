@@ -9,6 +9,7 @@ import { validaTelefone } from 'src/app/utils/validaTelefone.utils';
 })
 export class ModalComponent {
   @Output() fechar = new EventEmitter<void>();
+  @Output() solicitarContato = new EventEmitter<void>();
 
   contatoSelecionado: 'telefone' | 'email' | null = null;
 
@@ -79,5 +80,7 @@ export class ModalComponent {
     this.fechar.emit();
   }
 
-  solicitar() {}
+  solicitar() {
+    this.solicitarContato.emit();
+  }
 }

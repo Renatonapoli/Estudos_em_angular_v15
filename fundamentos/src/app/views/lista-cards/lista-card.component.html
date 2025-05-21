@@ -8,6 +8,7 @@
       (saibaMais)="abrirModal()"
       ></card>
 
-      <modal *ngIf="modalAberto" (fechar)="fecharModal()"></modal>
+      <modal *ngIf="modalAberto" (solicitarContato)="contatoEnviadoComSucesso()" (fechar)="fecharModal()"></modal>
+      <modal-sucesso *ngIf="modalSolicitarContato" (modalfechado)="fecharModalSucesso()"></modal-sucesso>
   </div>
 </section>

@@ -1,0 +1,11 @@
+<section>
+  <nav>
+    <h1>Lista de pokemóns</h1>
+  </nav>
+
+
+<div *ngFor="let pokemon of listaPokemons">
+  <card [titulo]="pokemon.name" [imagem]="pokemon.image"></card>
+</div>
+
+</section>

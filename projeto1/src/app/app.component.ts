@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PokemonsService } from './service/pokemons.service';
 import { SuperHeroisService } from './service/superHerois.service';
+import { RickardMortyService } from './service/rickandmorty.service';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +12,18 @@ export class AppComponent {
   title = 'projeto1';
   listaPokemons: any[] = [];
   listaDeHerois: any[] = [];
+  listaRickand: any[] = [];
 
   constructor(
     private pokemonsService: PokemonsService,
-    private superHeroisService: SuperHeroisService
+    private superHeroisService: SuperHeroisService,
+    private rickardMortyService: RickardMortyService
   ) {}
 
   ngOnInit() {
     // this.pokemons()
-    this.superHerois();
+    // this.superHerois();
+    this.rickandMorty();
   }
 
   pokemons() {
@@ -34,7 +38,15 @@ export class AppComponent {
     this.superHeroisService.getSuperHerois().subscribe({
       next: (heroi) => {
         this.listaDeHerois = heroi;
-        console.log(this.listaDeHerois);
+      },
+    });
+  }
+
+  rickandMorty() {
+    this.rickardMortyService.getRichardyMortyAll().subscribe({
+      next: (data) => {
+        this.listaRickand = data;
+        console.log(this.listaRickand);
       },
     });
   }

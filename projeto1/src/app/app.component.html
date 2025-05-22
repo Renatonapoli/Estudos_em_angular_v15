@@ -8,8 +8,12 @@
   <card [titulo]="pokemon.name" [imagem]="pokemon.image"></card>
 </div> -->
 
-<div *ngFor="let heroi of listaDeHerois">
+<!-- <div *ngFor="let heroi of listaDeHerois">
   <card [titulo]="heroi.name" [imagem]="heroi.image.url"></card>
+</div> -->
+
+<div *ngFor="let personagem of listaRickand">
+  <card [titulo]="personagem.nome" [imagem]="personagem.imagem"></card>
 </div>
 
 </section>

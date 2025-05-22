@@ -4,8 +4,12 @@
   </nav>
 
 
-<div *ngFor="let pokemon of listaPokemons">
+<!-- <div *ngFor="let pokemon of listaPokemons">
   <card [titulo]="pokemon.name" [imagem]="pokemon.image"></card>
+</div> -->
+
+<div *ngFor="let heroi of listaDeHerois">
+  <card [titulo]="heroi.name" [imagem]="heroi.image.url"></card>
 </div>
 
 </section>

@@ -68,7 +68,8 @@
               "browserTarget": "projeto1:build:production"
             },
             "development": {
-              "browserTarget": "projeto1:build:development"
+              "browserTarget": "projeto1:build:development",
+              "proxyConfig": "src/proxy.config.js"
             }
           },
           "defaultConfiguration": "development"

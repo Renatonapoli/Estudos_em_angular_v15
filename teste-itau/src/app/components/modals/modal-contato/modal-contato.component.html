@@ -1,0 +1,38 @@
+<section>
+  <button (click)="fecharModal()">X</button>
+  <h1>Como você prefere receber o nosso contato?</h1>
+
+  <p>
+    Converse com nosso time de consultores e conheça as facilidades
+    de tecnologia e gestão que cabem no seu negócio.
+  </p>
+
+  <div>
+    <label>
+      telefone
+      <input type="radio" name="contato" (change)="contatoSelecionado('telefone')">
+      <input type="text" *ngIf="contatos === 'telefone'" [(ngModel)]="telefone">
+    </label>
+  </div>
+  <hr>
+  <div>
+    <label>
+      e-mail
+      <input type="radio" name="contato" (change)="contatoSelecionado('email')">
+      <input type="text" *ngIf="contatos === 'email'" [(ngModel)]="email">
+    </label>
+  </div>
+  <hr>
+  <span>atendimento em <strong>até 03 dias úteis</strong></span>
+
+  <p>
+    As informações fornecidas não alteram os dados cadastrais da sua conta e podem
+    ser compartilhadas com empresas parceiras e poderão ser tratados de acordo com
+    a nossa Política de Privacidade disponível em nossos sites e aplicativos.
+  </p>
+
+  <div>
+    <button (click)="fecharModal()">voltar</button>
+    <button (click)="solicitarContato()" [disabled]="!telefone && !email">solicitar contato</button>
+  </div>
+</section>

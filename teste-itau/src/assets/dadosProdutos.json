@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "titulo": "Conexão Itaú",
+      "conteudo": "Emita NF-e, controle seu caixa e estoque, cocilie recebíveis e mais"
+    },
+    {
+      "titulo": "Tecnologia no PDV",
+      "conteudo": "Automatize e integre tecnologia á gestão do ponto de venda"
+    },
+    {
+      "titulo": "benefícios Ticket",
+      "conteudo": "alimentação, Restaurante, flex e Superflex. Conheça!"
+    }
+  ]
+}

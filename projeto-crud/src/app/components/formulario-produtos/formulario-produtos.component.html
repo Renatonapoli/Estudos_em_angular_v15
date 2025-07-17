@@ -1,0 +1,15 @@
+<form>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Noem do Produto</label>
+    <input id="nome" formControlName="nome" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="preco" class="form-label">Preço</label>
+    <input id="preco" formControlName="preco" type="number" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    {{ produtoEditando ? 'Atualizar' : 'Cadastrar' }}
+  </button>
+</form>

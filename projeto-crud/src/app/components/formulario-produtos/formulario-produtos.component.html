@@ -1,6 +1,6 @@
-<form>
+<form [formGroup]="form" (submit)="submit()" class="mb-4">
   <div class="mb-3">
-    <label for="nome" class="form-label">Noem do Produto</label>
+    <label for="nome" class="form-label">Nome do Produto</label>
     <input id="nome" formControlName="nome" class="form-control">
   </div>
 

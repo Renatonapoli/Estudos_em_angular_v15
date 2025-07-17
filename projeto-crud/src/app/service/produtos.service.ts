@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produto } from '../models/produto';
+import { ProdutoCriacao } from '../models/produtoCriacao';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ export class ProdutoService {
     return this.http.get<Produto[]>(this.url);
   }
 
-  salvar(produto: Produto): Observable<Produto> {
+  salvar(produto: ProdutoCriacao): Observable<Produto> {
     return this.http.post<Produto>(this.url, produto);
   }
 

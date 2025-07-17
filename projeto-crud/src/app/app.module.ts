@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaProdutosComponent } from './components/lista-produtos/lista-produtos.component';
 import { FormularioProdutosComponent } from './components/formulario-produtos/formulario-produtos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { FormularioProdutosComponent } from './components/formulario-produtos/fo
     ListaProdutosComponent,
     FormularioProdutosComponent,
   ],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

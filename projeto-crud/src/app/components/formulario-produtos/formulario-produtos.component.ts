@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Produto } from 'src/app/models/produto';
 
@@ -9,7 +9,7 @@ import { Produto } from 'src/app/models/produto';
 })
 export class FormularioProdutosComponent {
   @Input() produtoEditando: Produto | null = null;
-  @Input() aoSalvar = new EventEmitter<Produto>();
+  @Output() aoSalvar = new EventEmitter<Produto>();
 
   form!: FormGroup;
 
@@ -31,6 +31,7 @@ export class FormularioProdutosComponent {
       const produto: Produto = {
         ...this.produtoEditando,
         ...this.form.value,
+        preco: Number(this.form.value.preco),
       };
       this.aoSalvar.emit(produto);
       this.form.reset();

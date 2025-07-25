@@ -1,0 +1,20 @@
+<div>
+  <h1>Lista Pokemon</h1>
+
+  <div class="container-card">
+    <div class="cards" *ngFor="let pokemon of arrayPokemons">
+      <card-pokemon
+      [nome]="pokemon.nome"
+      [imagem]="pokemon.imagem"
+      (dados)="buscarDetalhes($event)"
+      />
+    </div>
+
+    <div *ngIf="pokemonSelecionado">
+  <h2>{{ pokemonSelecionado.name | uppercase }}</h2>
+  <img [src]="pokemonSelecionado.sprites.front_default" />
+  <p><strong>Weight: {{ pokemonSelecionado.weight }}</strong></p>
+</div>
+
+  </div>
+</div>

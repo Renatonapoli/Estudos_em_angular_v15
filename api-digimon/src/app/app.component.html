@@ -1,0 +1,13 @@
+<div>
+  <h1>Digimons</h1>
+
+  <div class="container">
+    <div class="card" *ngFor="let digimon of digimons">
+      <card-digimon
+      [nome]="digimon.nome"
+      [imagem]="digimon.imagem"
+      (info)="infoDigimon(digimon.id)"
+      />
+    </div>
+  </div>
+</div>
